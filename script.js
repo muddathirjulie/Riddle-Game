@@ -63,7 +63,7 @@ function checkAnswer() {
       resultElement.textContent = `Incorrect! The answer is ${currentRiddle.answer}. Moving to the next riddle.`;
       setTimeout(function() {
         nextRiddle();
-      }, 2000);
+      }, 3000);
     }
   }
 }
