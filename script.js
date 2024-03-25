@@ -10,8 +10,14 @@ const riddles = [
     { question: "I'm not alive, but I can grow; I don't have lungs, but I need air; I don't have a mouth, but water kills me. What am I?", answer: "fire" },
     { question: "What has a neck but no head?", answer: "bottle" },
     { question: "What has one eye but can't see?", answer: "needle" },
-    { question: "What gets wetter as it dries?", answer: "towel" }
-  ];
+    { question: "What gets wetter as it dries?", answer: "towel" },
+    { question: "What can you catch but not throw?", answer: "cold" },
+    { question: "What is always in front of you but can't be seen?", answer: "future" },
+    { question: "What has many keys but can't open a single lock?", answer: "piano" },
+    { question: "What has a head and a tail but no body?", answer: "coin" },
+    { question: "What is full of holes but still holds water?", answer: "sponge" },
+    { question: "What belongs to you but other people use it more than you?", answer: "name" }
+    ];
   
   
   let currentRiddleIndex = 0;
