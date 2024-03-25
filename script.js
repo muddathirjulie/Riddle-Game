@@ -15,7 +15,7 @@ const riddles = [
   
   
   let currentRiddleIndex = 0;
-let wrongAttempts = 0; // Track wrong attempts for the current riddle
+  let wrongAttempts = 0; // Track wrong attempts for the current riddle
 
 document.getElementById('guessInput').addEventListener('keydown', function(event) {
   if (event.keyCode === 13) { // Check if the pressed key is Enter
@@ -78,7 +78,7 @@ function nextRiddle() {
     document.getElementById('guessInput').value = ""; // Clear the input field
     document.getElementById('result').textContent = ""; // Clear the result message
   } else {
-    document.getElementById('riddle-container').innerHTML = "<p>Congratulations! You've solved all the riddles.</p>";
+    document.getElementById('riddle-container').innerHTML = "<p>Congratulations! You made it to the end</p>";
   }
 }
 
