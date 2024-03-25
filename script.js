@@ -4,7 +4,7 @@ const riddles = [
     { question: "What has keys but can't open locks?", answer: "piano" },
     { question: "What can be cracked, made, told, and played? ", answer: "joke" },
     { question: "What comes once in a minute, twice in a moment, but never in a thousand years?", answer: "the letter 'M'" },
-    { question: "What has a head, a tail, is brown, and has no legs?", answer: "penny" },
+    { question: "What has a head, a tail, is brown, and has no legs?", answer: "coin" },
     { question: "The more you take, the more you leave behind. What am I?", answer: "time" },
     { question: "What can travel around the world while staying in a corner?", answer: "stamp" },
     { question: "I'm not alive, but I can grow; I don't have lungs, but I need air; I don't have a mouth, but water kills me. What am I?", answer: "fire" },
@@ -21,12 +21,12 @@ const riddles = [
   
   
   let currentRiddleIndex = 0;
-  let wrongAttempts = 0; // Track wrong attempts for the current riddle
+  let wrongAttempts = 0;
 
 document.getElementById('guessInput').addEventListener('keydown', function(event) {
-  if (event.keyCode === 13) { // Check if the pressed key is Enter
-    event.preventDefault(); // Prevent the default action (form submission)
-    checkAnswer(); // Call the checkAnswer function
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    checkAnswer();
   }
 });
 
@@ -44,7 +44,6 @@ function checkAnswer() {
   if (guess === currentRiddle.answer) {
     resultElement.textContent = "Correct! Well done!";
     
-    // Trigger confetti animation
     for (let i = 0; i < 50; i++) {
       const confetti = document.createElement('div');
       confetti.classList.add('confetti');
@@ -56,7 +55,7 @@ function checkAnswer() {
     setTimeout(function() {
       nextRiddle();
       clearConfetti();
-    }, 2000); // Move to the next riddle after 2 seconds
+    }, 2000); 
   } else {
     resultElement.textContent = "Incorrect! Try again.";
     wrongAttempts++;
@@ -64,7 +63,7 @@ function checkAnswer() {
       resultElement.textContent = `Incorrect! The answer is ${currentRiddle.answer}. Moving to the next riddle.`;
       setTimeout(function() {
         nextRiddle();
-      }, 2000); // Move to the next riddle after 2 seconds
+      }, 2000);
     }
   }
 }
@@ -78,11 +77,11 @@ function clearConfetti() {
 
 function nextRiddle() {
   currentRiddleIndex++;
-  wrongAttempts = 0; // Reset wrong attempts for the next riddle
+  wrongAttempts = 0;
   if (currentRiddleIndex < riddles.length) {
     displayRiddle();
-    document.getElementById('guessInput').value = ""; // Clear the input field
-    document.getElementById('result').textContent = ""; // Clear the result message
+    document.getElementById('guessInput').value = "";
+    document.getElementById('result').textContent = "";
   } else {
     document.getElementById('riddle-container').innerHTML = "<p>Congratulations! You made it to the end</p>";
   }
