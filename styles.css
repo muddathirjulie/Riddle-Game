@@ -1,1 +1,90 @@
-
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #ff6347;
+  }
+  
+  .description {
+    color: #4b0082;
+    font-size: 1.2em;
+  }
+  
+  #riddle-container {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #riddle {
+    font-size: 1.5em;
+    color: #1e90ff;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 2px solid #1e90ff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff6347;
+  }
+  
+  #result {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  @keyframes confetti {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(1000px) rotate(720deg);
+    }
+  }
+  
+  .confetti {
+    width: 10px;
+    height: 10px;
+    background-color: #ffc107;
+    position: absolute;
+    animation: confetti 3s ease-out infinite; /* Add 'infinite' to keep the animation looping */
+  }
+  
+  /* Add variations for different confetti styles */
+  .confetti:nth-child(2n) {
+    width: 8px;
+    height: 8px;
+    background-color: #ffeb3b; /* Change color */
+    animation-delay: 1s; /* Delay the animation */
+  }
+  
+  .confetti:nth-child(3n) {
+    width: 12px;
+    height: 12px;
+    background-color: #ff9800; /* Change color */
+    animation-duration: 4s; /* Increase duration */
+  }
+  
+  /* Add more variations as needed */
+  
+  
+  
